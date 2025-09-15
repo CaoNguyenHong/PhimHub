@@ -1,3 +1,4 @@
+<!-- single_movie_main.html -->
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -6,7 +7,7 @@
     <title>Phim Lẻ - WebPhim</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="single-movie-main.css">
+    <link rel="stylesheet" href="/assets/movies/single_movie/single_movie_main/single_movie_main.css">
 </head>
 <body>
     <!-- Header -->
@@ -17,8 +18,22 @@
             </div>
             <nav>
                 <ul>
-                    <li>Thể loại <i class="fas fa-caret-down"></i></li>
-                    <li>Chủ đề <i class="fas fa-caret-down"></i></li>
+                    <li>Thể loại <i class="fas fa-caret-down"></i>
+                        <ul class="dropdown">
+                            <li>Hành động</li>
+                            <li>Khoa học viễn tưởng</li>
+                            <li>Hài hước</li>
+                            <li>Kinh dị</li>
+                        </ul>
+                    </li>
+                    <li>Chủ đề <i class="fas fa-caret-down"></i>
+                        <ul class="dropdown">
+                            <li>Siêu anh hùng</li>
+                            <li>Cổ trang</li>
+                            <li>Romantic</li>
+                            <li>Hoạt hình</li>
+                        </ul>
+                    </li>
                     <li>Trending</li>
                     <li>Phim lẻ</li>
                     <li>Phim bộ</li>
@@ -65,6 +80,10 @@
                     <button class="filter-btn" data-year="2023">2023</button>
                     <button class="filter-btn" data-year="2022">2022</button>
                     <button class="filter-btn" data-year="2021">2021</button>
+                    <button class="filter-btn" data-year="2020">2020</button>
+                    <button class="filter-btn" data-year="2019">2019</button>
+                    <button class="filter-btn" data-year="2018">2018</button>
+                    <button class="filter-btn" data-year="2017">2017</button>
                 </div>
                 <div class="filter-group">
                     <h3>Thể loại</h3>
@@ -73,6 +92,7 @@
                     <button class="filter-btn" data-genre="animation">Hoạt hình</button>
                     <button class="filter-btn" data-genre="horror">Kinh dị</button>
                     <button class="filter-btn" data-genre="sci-fi">Khoa học viễn tưởng</button>
+                    <button class="filter-btn" data-genre="comedy">Hài hước</button>
                 </div>
                 <div class="filter-group">
                     <h3>Sắp xếp</h3>
@@ -81,7 +101,7 @@
                     <button class="filter-btn" data-sort="views">Lượt xem</button>
                     <button class="filter-btn" data-sort="newest">Mới nhất</button>
                 </div>
-                <button class="filter-submit" onclick="applyFilters()">Lọc kết quả</button>
+                <button class="filter-submit">Lọc kết quả</button>
             </div>
         </div>
     </div>
@@ -96,11 +116,9 @@
     <!-- Phân trang -->
     <div class="pagination">
         <div class="container">
-            <button class="page-btn" onclick="changePage(currentPage - 1)">&laquo;</button>
-            <button class="page-btn active" onclick="changePage(1)">1</button>
-            <button class="page-btn" onclick="changePage(2)">2</button>
-            <button class="page-btn" onclick="changePage(3)">3</button>
-            <input type="number" class="page-input" min="1" max="10" placeholder="Nhập 10" onkeypress="if(event.key === 'Enter') changePage(this.value)">
+            <button class="page-btn" id="prevPage">&laquo;</button>
+            <div id="pageNumbers"></div>
+            <input type="number" class="page-input" id="pageInput" min="1" placeholder="Nhập trang">
         </div>
     </div>
 
@@ -120,6 +138,6 @@
         </div>
     </footer>
 
-    <script src="single-movie-main.js"></script>
+    <script src="/assets/movies/single_movie/single_movie_main/single_movie_main.js"></script>
 </body>
 </html>

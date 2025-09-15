@@ -1,3 +1,4 @@
+//modal.js
 // Modal Login & Register Functionality
 const loginBtn = document.querySelector('.login-btn');
 const registerBtn = document.querySelector('.register-btn');

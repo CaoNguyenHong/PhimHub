@@ -1,3 +1,4 @@
+//layout.js
 // Carousel slider with click functionality
 const carouselWrapper = document.querySelector('.carousel-wrapper');
 const hero = document.querySelector('.hero');

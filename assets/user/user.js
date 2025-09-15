@@ -1,3 +1,4 @@
+//user.js
 // Kiểm tra trạng thái đăng nhập
 const isLoggedIn = localStorage.getItem('isLoggedIn');
 const username = localStorage.getItem('username');

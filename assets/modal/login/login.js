@@ -1,3 +1,4 @@
+//login.js
 export function initLoginModal(modalContainer) {
     const loginModal = modalContainer.querySelector('.login-modal');
     const closeBtn = loginModal.querySelector('.close-btn');

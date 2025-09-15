@@ -1,3 +1,4 @@
+//movie-detail.js
 // Dữ liệu phim mẫu
 const movieData = {
     title: "Đấu Trường Sinh Tử",

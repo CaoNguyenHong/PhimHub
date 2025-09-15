@@ -1,3 +1,4 @@
+//register.js
 export function initRegisterModal(modalContainer) {
     const registerModal = modalContainer.querySelector('.register-modal');
     const closeBtn = registerModal.querySelector('.close-btn');
