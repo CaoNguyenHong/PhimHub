@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phim Lẻ - WebPhim</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="single-movie-main.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <img src="../../images/logo.jpg" alt="Logo" style="width: 60px; height: 60px; border-radius: 50%;">
+            </div>
+            <nav>
+                <ul>
+                    <li>Thể loại <i class="fas fa-caret-down"></i></li>
+                    <li>Chủ đề <i class="fas fa-caret-down"></i></li>
+                    <li>Trending</li>
+                    <li>Phim lẻ</li>
+                    <li>Phim bộ</li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" placeholder="Tìm kiếm phim, diễn viên...">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="user-icon">
+                <img src="../../images/avatar.jpg" alt="Avatar" class="avatar-img">
+            </div>
+        </div>
+    </header>
+
+    <!-- Tiêu đề trang -->
+    <div class="page-title">
+        <h1>Phim lẻ <i class="fas fa-th"></i></h1>
+    </div>
+
+    <!-- Bộ lọc -->
+    <div class="filter-section">
+        <div class="container">
+            <button class="filter-toggle">Bộ lọc <i class="fas fa-filter"></i></button>
+            <div class="filter-options">
+                <div class="filter-group">
+                    <h3>Loại phim</h3>
+                    <button class="filter-btn active" data-type="all">Tất cả</button>
+                    <button class="filter-btn" data-type="single">Phim lẻ</button>
+                    <button class="filter-btn" data-type="series">Phim bộ</button>
+                </div>
+                <div class="filter-group">
+                    <h3>Lứa tuổi</h3>
+                    <button class="filter-btn active" data-age="all">Tất cả</button>
+                    <button class="filter-btn" data-age="p">P</button>
+                    <button class="filter-btn" data-age="13+">13+</button>
+                    <button class="filter-btn" data-age="16+">16+</button>
+                    <button class="filter-btn" data-age="18+">18+</button>
+                </div>
+                <div class="filter-group">
+                    <h3>Năm sản xuất</h3>
+                    <button class="filter-btn active" data-year="all">Tất cả</button>
+                    <button class="filter-btn" data-year="2024">2024</button>
+                    <button class="filter-btn" data-year="2023">2023</button>
+                    <button class="filter-btn" data-year="2022">2022</button>
+                    <button class="filter-btn" data-year="2021">2021</button>
+                </div>
+                <div class="filter-group">
+                    <h3>Thể loại</h3>
+                    <button class="filter-btn" data-genre="action">Hành động</button>
+                    <button class="filter-btn" data-genre="romance">Tình cảm</button>
+                    <button class="filter-btn" data-genre="animation">Hoạt hình</button>
+                    <button class="filter-btn" data-genre="horror">Kinh dị</button>
+                    <button class="filter-btn" data-genre="sci-fi">Khoa học viễn tưởng</button>
+                </div>
+                <div class="filter-group">
+                    <h3>Sắp xếp</h3>
+                    <button class="filter-btn" data-sort="a-z">A-Z</button>
+                    <button class="filter-btn" data-sort="z-a">Z-A</button>
+                    <button class="filter-btn" data-sort="views">Lượt xem</button>
+                    <button class="filter-btn" data-sort="newest">Mới nhất</button>
+                </div>
+                <button class="filter-submit" onclick="applyFilters()">Lọc kết quả</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Danh sách phim -->
+    <div class="movie-list-section">
+        <div class="container">
+            <div class="movie-grid" id="movieGrid"></div>
+        </div>
+    </div>
+
+    <!-- Phân trang -->
+    <div class="pagination">
+        <div class="container">
+            <button class="page-btn" onclick="changePage(currentPage - 1)">&laquo;</button>
+            <button class="page-btn active" onclick="changePage(1)">1</button>
+            <button class="page-btn" onclick="changePage(2)">2</button>
+            <button class="page-btn" onclick="changePage(3)">3</button>
+            <input type="number" class="page-input" min="1" max="10" placeholder="Nhập 10" onkeypress="if(event.key === 'Enter') changePage(this.value)">
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-logo">
+                <img src="../../images/logo.jpg" alt="Logo" style="width: 50px; height: 50px; border-radius: 50%;">
+            </div>
+            <div class="footer-links">
+                <a href="#">Liên hệ</a>
+                <a href="#">Giới thiệu</a>
+                <a href="#">Điều khoản</a>
+                <a href="#">Hỏi đáp</a>
+            </div>
+            <p class="footer-text">PhimHUB – Nơi xem phim cho những người tài chính eo hẹp...</p>
+        </div>
+    </footer>
+
+    <script src="single-movie-main.js"></script>
+</body>
+</html>

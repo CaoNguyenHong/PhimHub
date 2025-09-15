@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Tài Khoản - Web Xem Phim</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="user.css">
+</head>
+<body>
+    <!-- Overlay cho xác nhận đăng xuất -->
+    <div class="overlay"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <img src="../images/logo.jpg" alt="Logo" style="width: 120px; height: auto;">
+            </div>
+            <nav>
+                <ul>
+                    <li>Thể loại <i class="fas fa-caret-down"></i>
+                        <ul class="dropdown">
+                            <li>Hành động</li>
+                            <li>Khoa học viễn tưởng</li>
+                            <li>Hài hước</li>
+                            <li>Kinh dị</li>
+                        </ul>
+                    </li>
+                    <li>Chủ đề <i class="fas fa-caret-down"></i>
+                        <ul class="dropdown">
+                            <li>Siêu anh hùng</li>
+                            <li>Cổ trang</li>
+                            <li>Romantic</li>
+                            <li>Hoạt hình</li>
+                        </ul>
+                    </li>
+                    <li>Trending</li>
+                    <li>Phim lẻ</li>
+                    <li>Phim bộ</li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" placeholder="Tìm kiếm phim, diễn viên...">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="user-icon" title="Trang tài khoản">
+                <img src="../images/avatar.jpg" alt="Avatar" class="avatar-img">
+            </div>
+            <button class="toggle-sidebar-btn"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+
+    <!-- Main content -->
+    <main class="main-content">
+        <div class="content-wrapper">
+            <div class="user-card">
+                <div class="avatar-container">
+                    <div class="avatar" style="background-image: url('../images/user-avatar.jpg');"></div>
+                    <button class="btn-change-avatar">Đổi ảnh đại diện</button>
+                    <input type="file" id="avatar-input" accept="image/*" style="display: none;">
+                </div>
+                <form class="user-form">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" value="user@example.com" placeholder="Email của bạn" required>
+                        <span class="clear-btn"><i class="fas fa-times"></i></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="username">Tên người dùng</label>
+                        <input type="text" id="username" value="JohnDoe" placeholder="Tên người dùng" required>
+                        <span class="clear-btn"><i class="fas fa-times"></i></span>
+                    </div>
+                    <div class="btn-group">
+                        <button type="submit" class="btn-update">Cập nhật</button>
+                        <button type="button" class="btn-password">Đổi mật khẩu</button>
+                    </div>
+                </form>
+            </div>
+            <aside class="sidebar">
+                <ul>
+                    <li class="nav-item active"><i class="fas fa-user"></i> Tài khoản</li>
+                    <li class="nav-item"><i class="fas fa-heart"></i> Yêu thích</li>
+                    <li class="nav-item"><i class="fas fa-list"></i> Danh sách</li>
+                    <li class="nav-item"><i class="fas fa-clock"></i> Đã xem</li>
+                    <li class="nav-item logout-btn"><i class="fas fa-sign-out-alt"></i> Đăng xuất</li>
+                </ul>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-logo">
+                <img src="../images/logo.png" alt="Logo" style="width: 120px; height: auto; background-color: #F6C9C0; border-radius: 50%; padding: 10px;">
+            </div>
+            <div class="footer-links">
+                <a href="#">Liên hệ</a>
+                <a href="#">Giới thiệu</a>
+                <a href="#">Điều khoản</a>
+                <a href="#">Hỏi đáp</a>
+            </div>
+            <p class="footer-text">Web xem phim chất lượng cao, cập nhật liên tục. © 2025</p>
+        </div>
+    </footer>
+
+    <!-- Modal xác nhận đăng xuất -->
+    <div class="logout-modal">
+        <div class="modal-content">
+            <h2>Xác nhận đăng xuất</h2>
+            <p>Bạn có chắc muốn đăng xuất không?</p>
+            <div class="modal-btns">
+                <button class="btn-confirm">Đồng ý</button>
+                <button class="btn-cancel">Hủy</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/main.js"></script>
+    <script src="user.js"></script>
+</body>
+</html>

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Xem Phim</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Overlay cho làm mờ nền khi modal hoặc xác nhận mở -->
+    <div class="overlay"></div>
+
+    <!-- Header cố định -->
+    <header>
+        <div class="container header-content">
+            <div class="logo"></div>
+            <nav>
+                <ul>
+                    <li>Thể loại <i class="fas fa-caret-down"></i>
+                        <ul class="dropdown">
+                            <li>Hành động</li>
+                            <li>Khoa học viễn tưởng</li>
+                            <li>Hài hước</li>
+                            <li>Kinh dị</li>
+                        </ul>
+                    </li>
+                    <li>Chủ đề <i class="fas fa-caret-down"></i>
+                        <ul class="dropdown">
+                            <li>Siêu anh hùng</li>
+                            <li>Cổ trang</li>
+                            <li>Romantic</li>
+                            <li>Hoạt hình</li>
+                        </ul>
+                    </li>
+                    <li>Trending</li>
+                    <li>Phim lẻ</li>
+                    <li>Phim bộ</li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" placeholder="Tìm kiếm...">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="auth-buttons">
+                <button class="auth-btn login-btn">Đăng nhập</button>
+                <button class="auth-btn register-btn">Đăng ký</button>
+            </div>
+            <div class="user-icon" style="display: none;" title="Trang tài khoản">
+                <i class="fas fa-user-circle"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero" style="background-image: url('assets/images/banner1.jpg');">
+        <div class="container hero-content">
+            <div class="hero-overlay">
+                <h1 class="hero-title">Dune: Part Two</h1>
+                <div class="hero-tags">
+                    <span class="tag">Hành động</span>
+                    <span class="tag">Khoa học</span>
+                    <span class="tag">Viễn tưởng</span>
+                </div>
+                <div class="play-btn"><i class="fas fa-play"></i></div>
+                <p class="hero-desc">Paul Atreides unites with Chani and the Fremen while seeking revenge against the conspirators who destroyed his family.</p>
+            </div>
+        </div>
+        <div class="view-modes">
+            <div class="view-btn"><i class="fas fa-th-large"></i></div>
+            <div class="view-btn"><i class="fas fa-list"></i></div>
+        </div>
+    </section>
+
+    <section class="carousel container">
+        <div class="carousel-wrapper">
+            <div class="carousel-item" data-title="Dune: Part Two" data-desc="Paul Atreides unites with Chani and the Fremen while seeking revenge..." data-img="assets/images/banner1.jpg" style="background-image: url('assets/images/banner1.jpg');"></div>
+            <div class="carousel-item" data-title="The Godfather" data-desc="The aging patriarch of an organized crime dynasty transfers control of his empire..." data-img="assets/images/banner2.jpg" style="background-image: url('assets/images/banner2.jpg');"></div>
+            <div class="carousel-item" data-title="Inception" data-desc="A skilled thief is given the task of planting an idea into the mind of a CEO..." data-img="assets/images/dienanhmoi1.jpg" style="background-image: url('assets/images/dienanhmoi1.jpg');"></div>
+            <div class="carousel-item" data-title="Movie 4" data-desc="Description for movie 4..." data-img="assets/images/phimbomoi1.jpg" style="background-image: url('assets/images/phimbomoi1.jpg');"></div>
+            <div class="carousel-item" data-title="Movie 5" data-desc="Description for movie 5..." data-img="assets/images/phimbomoi2.jpg" style="background-image: url('assets/images/phimbomoi2.jpg');"></div>
+        </div>
+    </section>
+
+    <section class="section container">
+        <div class="section-header">
+            <h2 class="section-title">Phim đã xem</h2>
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="slider-container">
+            <button class="prev">&#10094;</button>
+            <div class="poster-grid">
+                <div class="poster">
+                    <img src="assets/images/dienanhmoi1.jpg" alt="Phim 1">
+                    <p class="poster-title">Phim 1</p>
+                    <div class="progress-bar" style="width: 60%;"></div>
+                </div>
+                <div class="poster">
+                    <img src="assets/images/dienanhmoi2.jpg" alt="Phim 2">
+                    <p class="poster-title">Phim 2</p>
+                    <div class="progress-bar" style="width: 30%;"></div>
+                </div>
+                <div class="poster">
+                    <img src="assets/images/phimbomoi1.jpg" alt="Phim 3">
+                    <p class="poster-title">Phim 3</p>
+                    <div class="progress-bar" style="width: 85%;"></div>
+                </div>
+                <div class="poster">
+                    <img src="assets/images/phimbomoi2.jpg" alt="Phim 4">
+                    <p class="poster-title">Phim 4</p>
+                    <div class="progress-bar" style="width: 45%;"></div>
+                </div>
+                <div class="poster">
+                    <img src="assets/images/dienanhmoi3.jpg" alt="Phim 5">
+                    <p class="poster-title">Phim 5</p>
+                    <div class="progress-bar" style="width: 10%;"></div>
+                </div>
+                <div class="poster">
+                    <img src="assets/images/dienanhmoi4.jpg" alt="Phim 6">
+                    <p class="poster-title">Phim 6</p>
+                    <div class="progress-bar" style="width: 75%;"></div>
+                </div>
+                <div class="poster">
+                    <img src="assets/images/phimlemoi1.jpg" alt="Phim 7">
+                    <p class="poster-title">Phim 7</p>
+                    <div class="progress-bar" style="width: 90%;"></div>
+                </div>
+                <div class="poster">
+                    <img src="assets/images/phimlemoi2.jpg" alt="Phim 8">
+                    <p class="poster-title">Phim 8</p>
+                    <div class="progress-bar" style="width: 20%;"></div>
+                </div>
+                <div class="poster">
+                    <img src="assets/images/phimlemoi3.jpg" alt="Phim 9">
+                    <p class="poster-title">Phim 9</p>
+                    <div class="progress-bar" style="width: 50%;"></div>
+                </div>
+                <div class="poster">
+                    <img src="assets/images/phimlemoi4.jpg" alt="Phim 10">
+                    <p class="poster-title">Phim 10</p>
+                    <div class="progress-bar" style="width: 65%;"></div>
+                </div>
+            </div>
+            <button class="next">&#10095;</button>
+        </div>
+    </section>
+
+    <section class="section container">
+        <div class="section-header">
+            <h2 class="section-title">Điện ảnh mới</h2>
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="slider-container">
+            <button class="prev">&#10094;</button>
+            <div class="poster-grid">
+                <div class="poster"><img src="assets/images/dienanhmoi1.jpg" alt="Movie 1"><p class="poster-title">Movie 1</p></div>
+                <div class="poster"><img src="assets/images/dienanhmoi2.jpg" alt="Movie 2"><p class="poster-title">Movie 2</p></div>
+                <div class="poster"><img src="assets/images/dienanhmoi3.jpg" alt="Movie 3"><p class="poster-title">Movie 3</p></div>
+                <div class="poster"><img src="assets/images/dienanhmoi4.jpg" alt="Movie 4"><p class="poster-title">Movie 4</p></div>
+                <div class="poster"><img src="assets/images/dienanhmoi1.jpg" alt="Movie 5"><p class="poster-title">Movie 5</p></div>
+                <div class="poster"><img src="assets/images/dienanhmoi2.jpg" alt="Movie 6"><p class="poster-title">Movie 6</p></div>
+                <div class="poster"><img src="assets/images/dienanhmoi3.jpg" alt="Movie 7"><p class="poster-title">Movie 7</p></div>
+                <div class="poster"><img src="assets/images/dienanhmoi4.jpg" alt="Movie 8"><p class="poster-title">Movie 8</p></div>
+                <div class="poster"><img src="assets/images/dienanhmoi1.jpg" alt="Movie 9"><p class="poster-title">Movie 9</p></div>
+                <div class="poster"><img src="assets/images/dienanhmoi2.jpg" alt="Movie 10"><p class="poster-title">Movie 10</p></div>
+            </div>
+            <button class="next">&#10095;</button>
+        </div>
+    </section>
+
+    <section class="section container">
+        <div class="section-header">
+            <h2 class="section-title">TV Show mới</h2>
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="slider-container">
+            <button class="prev">&#10094;</button>
+            <div class="poster-grid">
+                <div class="poster"><img src="assets/images/phimbomoi1.jpg" alt="Show 1"><p class="poster-title">Show 1</p></div>
+                <div class="poster"><img src="assets/images/phimbomoi2.jpg" alt="Show 2"><p class="poster-title">Show 2</p></div>
+                <div class="poster"><img src="assets/images/phimbomoi3.jpg" alt="Show 3"><p class="poster-title">Show 3</p></div>
+                <div class="poster"><img src="assets/images/phimbomoi4.jpg" alt="Show 4"><p class="poster-title">Show 4</p></div>
+                <div class="poster"><img src="assets/images/phimbomoi1.jpg" alt="Show 5"><p class="poster-title">Show 5</p></div>
+                <div class="poster"><img src="assets/images/phimbomoi2.jpg" alt="Show 6"><p class="poster-title">Show 6</p></div>
+                <div class="poster"><img src="assets/images/phimbomoi3.jpg" alt="Show 7"><p class="poster-title">Show 7</p></div>
+                <div class="poster"><img src="assets/images/phimbomoi4.jpg" alt="Show 8"><p class="poster-title">Show 8</p></div>
+                <div class="poster"><img src="assets/images/phimbomoi1.jpg" alt="Show 9"><p class="poster-title">Show 9</p></div>
+                <div class="poster"><img src="assets/images/phimbomoi2.jpg" alt="Show 10"><p class="poster-title">Show 10</p></div>
+            </div>
+            <button class="next">&#10095;</button>
+        </div>
+    </section>
+
+    <section class="section container">
+        <div class="section-header">
+            <h2 class="section-title">Top thịnh hành</h2>
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="slider-container">
+            <button class="prev">&#10094;</button>
+            <div class="poster-grid">
+                <div class="poster"><img src="assets/images/dienanhmoi1.jpg" alt="Top 1"><p class="poster-title">Top 1</p></div>
+                <div class="poster"><img src="assets/images/dienanhmoi2.jpg" alt="Top 2"><p class="poster-title">Top 2</p></div>
+                <div class="poster"><img src="assets/images/dienanhmoi3.jpg" alt="Top 3"><p class="poster-title">Top 3</p></div>
+                <div class="poster"><img src="assets/images/dienanhmoi4.jpg" alt="Top 4"><p class="poster-title">Top 4</p></div>
+                <div class="poster"><img src="assets/images/dienanhmoi1.jpg" alt="Top 5"><p class="poster-title">Top 5</p></div>
+                <div class="poster"><img src="assets/images/dienanhmoi2.jpg" alt="Top 6"><p class="poster-title">Top 6</p></div>
+                <div class="poster"><img src="assets/images/dienanhmoi3.jpg" alt="Top 7"><p class="poster-title">Top 7</p></div>
+                <div class="poster"><img src="assets/images/dienanhmoi4.jpg" alt="Top 8"><p class="poster-title">Top 8</p></div>
+                <div class="poster"><img src="assets/images/dienanhmoi1.jpg" alt="Top 9"><p class="poster-title">Top 9</p></div>
+                <div class="poster"><img src="assets/images/dienanhmoi2.jpg" alt="Top 10"><p class="poster-title">Top 10</p></div>
+            </div>
+            <button class="next">&#10095;</button>
+        </div>
+    </section>
+
+    <section class="themes container">
+        <div class="theme-grid">
+            <div class="theme-btn" style="background-color: #4EB3B3;">Siêu anh hùng</div>
+            <div class="theme-btn" style="background-color: #F3CFCF;">Tuyệt đối điện ảnh</div>
+            <div class="theme-btn" style="background-color: #4CAF50;">Cổ trang</div>
+            <div class="theme-btn" style="background-color: #C08CE1;">Anime/Cartoon</div>
+            <div class="theme-btn" style="background-color: #55A7F0;">Cartoon Network/Disney</div>
+            <div class="theme-btn" style="background-color: #6D6D6D;">Tuyệt đối sợ hãi</div>
+            <div class="theme-btn" style="background-color: #F7A46A;">Tình cảm ướt át</div>
+            <div class="theme-btn" style="background-color: #F7E37D;">Nhẹ nhàng yên ả</div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">Liên hệ</a>
+                <a href="#">Giới thiệu</a>
+                <a href="#">Điều khoản</a>
+                <a href="#">Hỏi đáp</a>
+            </div>
+            <p class="footer-desc">Web xem phim chất lượng cao, cập nhật liên tục. © 2025</p>
+        </div>
+    </footer>
+
+    <!-- Modal Đăng nhập -->
+    <div class="login-modal">
+        <div class="close-btn">&times;</div>
+        <div class="modal-content">
+            <div class="image-section">
+                <img src="assets/images/poster_.jpg" alt="Movie Poster">
+            </div>
+            <div class="form-section">
+                <h2>ĐĂNG NHẬP</h2>
+                <form>
+                    <div class="input-group">
+                        <input type="text" placeholder="Tài khoản" id="login-username" required>
+                        <span class="input-icon"><i class="fas fa-user"></i></span>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" placeholder="Mật khẩu" id="login-password" required>
+                        <span class="toggle-password"><i class="fas fa-eye-slash"></i></span>
+                    </div>
+                    <div class="form-options">
+                        <a href="#" class="forgot-password">Quên mật khẩu?</a>
+                        <a href="#" class="register-link">Đăng ký</a>
+                    </div>
+                    <button type="submit" class="login-btn-modal">Đăng nhập</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Đăng ký -->
+    <div class="register-modal">
+        <div class="close-btn">&times;</div>
+        <div class="modal-content">
+            <div class="image-section">
+                <img src="assets/images/poster_.jpg" alt="Movie Poster">
+            </div>
+            <div class="form-section">
+                <h2>ĐĂNG KÝ</h2>
+                <form>
+                    <div class="input-group">
+                        <input type="text" placeholder="Tên người dùng" id="register-name" required>
+                        <span class="input-icon"><i class="fas fa-user"></i></span>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" placeholder="Tài khoản" id="register-username" required>
+                        <span class="input-icon"><i class="fas fa-envelope"></i></span>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" placeholder="Mật khẩu" id="register-password" required>
+                        <span class="toggle-password"><i class="fas fa-eye-slash"></i></span>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" placeholder="Nhập lại mật khẩu" id="confirm-password" required>
+                        <span class="toggle-password"><i class="fas fa-eye-slash"></i></span>
+                    </div>
+                    <button type="submit" class="register-btn-modal">Đăng ký</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal xác nhận đăng xuất -->
+    <div class="logout-modal" style="display: none;">
+        <div class="modal-content">
+            <h2>Xác nhận đăng xuất</h2>
+            <p>Bạn có chắc muốn đăng xuất không?</p>
+            <div class="modal-buttons">
+                <button class="confirm-logout">Đồng ý</button>
+                <button class="cancel-logout">Hủy</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,272 @@
+/* Reset và toàn cục */
+body {
+    background-color: #2D3E50;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #FFFFFF;
+}
+
+/* Header (tái sử dụng từ style.css) */
+header {
+    background-color: #1E2A3A;
+    border-bottom: 1px solid #3E4E63;
+}
+
+/* Banner lớn */
+.movie-banner {
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Main content */
+.main-content {
+    padding: 20px 0;
+    min-height: calc(100vh - 420px); /* Điều chỉnh theo header và footer */
+}
+
+.movie-detail-wrapper {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.movie-info {
+    flex: 1;
+    max-width: 400px;
+}
+
+.poster {
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.movie-info h1 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.movie-info h1 small {
+    font-size: 16px;
+    color: #B0B3C0;
+}
+
+.meta {
+    font-size: 14px;
+    color: #B0B3C0;
+    margin-bottom: 15px;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.btn-add-list, .btn-favorite, .btn-share, .btn-play, .btn-imdb, .btn-subtitle, .btn-dubbed {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-add-list {
+    background-color: #F6C9C0;
+    color: #2D3E50;
+}
+
+.btn-favorite {
+    background-color: transparent;
+    border: 2px solid #F6C9C0;
+    color: #FFFFFF;
+}
+
+.btn-share {
+    background-color: #3E4E63;
+    color: #FFFFFF;
+}
+
+.btn-add-list:hover {
+    background-color: #F0A9A0;
+}
+
+.btn-favorite:hover {
+    background-color: #F6C9C0;
+    color: #2D3E50;
+}
+
+.btn-share:hover {
+    background-color: #2D3E50;
+}
+
+.summary, .crew {
+    margin-bottom: 15px;
+}
+
+.summary h2, .crew h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.summary p, .crew p {
+    font-size: 14px;
+    color: #B0B3C0;
+    line-height: 1.5;
+}
+
+.movie-player {
+    flex: 2;
+    max-width: 600px;
+}
+
+.player-actions {
+    margin-bottom: 20px;
+}
+
+.btn-play {
+    background-color: #F6C9C0;
+    color: #2D3E50;
+    padding: 12px 25px;
+    font-size: 16px;
+}
+
+.btn-imdb {
+    background-color: #3E4E63;
+    color: #FFFFFF;
+    padding: 12px 20px;
+    margin-left: 10px;
+}
+
+.btn-play:hover {
+    background-color: #F0A9A0;
+}
+
+.btn-imdb:hover {
+    background-color: #2D3E50;
+}
+
+.tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.tab-btn {
+    background: none;
+    border: none;
+    color: #B0B3C0;
+    padding: 10px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.tab-btn.active {
+    color: #FFFFFF;
+    border-bottom: 2px solid #F6C9C0;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.btn-subtitle, .btn-dubbed {
+    background-color: #1E2A3A;
+    color: #FFFFFF;
+    margin: 5px 0;
+    padding: 8px 15px;
+}
+
+.btn-subtitle:hover, .btn-dubbed:hover {
+    background-color: #3E4E63;
+}
+
+.recommended {
+    margin-top: 30px;
+}
+
+.recommended h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.recommend-list {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+}
+
+.recommend-item {
+    width: 150px;
+    height: 225px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    display: flex;
+    align-items: flex-end;
+    padding: 10px;
+    color: #FFFFFF;
+    font-size: 14px;
+}
+
+/* Footer (tái sử dụng từ style.css) */
+footer {
+    background-color: #2D3E50;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid #3E4E63;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .movie-detail-wrapper {
+        flex-direction: column;
+    }
+
+    .movie-info, .movie-player {
+        max-width: 100%;
+    }
+
+    .poster {
+        height: 300px;
+    }
+
+    .player-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn-play, .btn-imdb {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .recommend-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .recommend-item {
+        width: 100%;
+        height: 200px;
+    }
+}
